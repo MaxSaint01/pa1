@@ -1,0 +1,247 @@
+[
+    {
+        "city": [
+            ["I", 1],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person with an infected left neighbor gets infected."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person with an infected right neighbor gets infected."
+    },
+    {
+        "city": [
+            ["I", 20],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person with two infected neighbors gets infected."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["R", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["S", 1],
+        "purpose": "Susceptible middle person with no infected neighbors does not get infected."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible first person with an infected left neighbor gets infected."
+    },
+
+    {
+        "city": [
+            ["S", 0],
+            ["I", 2],
+            ["S", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible first person with an infected right neighbor gets infected."
+    },
+
+    {
+        "city": [
+            ["S", 0],
+            ["I", 2],
+            ["I", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible first person with two infected neighbors gets infected."
+    },
+
+    {
+        "city": [
+            ["S", 0],
+            ["R", 2],
+            ["R", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["S", 1],
+        "purpose": "Susceptible first person with no infected neighbors does not get infected."
+    },
+    
+    {
+        "city": [
+            ["I", 1],
+            ["R", 0],
+            ["S", 0]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible last person with an infected right neighbor gets infected."
+    },
+    {
+        "city": [
+            ["R", 1],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible last person with an infected left neighbor gets infected."
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["I", 2],
+            ["S", 10]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible last person with two infected neighbors gets infected."
+    },
+    {
+        "city": [
+            ["R", 1],
+            ["R", 1500],
+            ["S", 10]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["S", 11],
+        "purpose": "Susceptible last person with no infected neighbors does not get infected."
+    },
+
+    {
+        "city": [
+            ["I", 1],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 2],
+        "purpose": "Person infected for fewer than days_contagtious - 1.  Person stays infected ith and their number of days infected increases by one."
+    },
+    {
+        "city": [
+            ["I", 2],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["R", 0],
+        "purpose": "Person infected for exactly days_contagtious - 1.  Person converts to recovers with zero days."
+    },
+    {
+        "city": [
+            ["I", 2],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 1,
+        "days_contagious": 2000,
+        "expected": ["I", 1501],
+        "purpose": "Person infected for fewer than days_contagtious - 1.  Person stays infected ith and their number of days infected increases by one.  Number of days is large."
+    },
+    {
+        "city": [
+            ["I", 2],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 1,
+        "days_contagious": 1501,
+        "expected": ["R", 0],
+        "purpose": "Person infected for exactly days_contagtious - 1.  Person converts to recovers with zero days. Number of days is large."
+    },
+    {
+        "city": [
+            ["I", 2],
+            ["I", 1500],
+            ["R", 0]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["R", 1],
+        "purpose": "Person is recovered.  Their number of days is increased by one."
+    },
+
+    {
+        "city": [
+	    ["R", 0],
+            ["I", 2],
+            ["S", 1500],
+            ["R", 0],
+	    ["R", 2]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person in a slightly larger city.  Left neighbor is infected, so the middle person gets infected."
+    },
+    {
+        "city": [
+	    ["R", 0],
+            ["R", 2],
+            ["S", 1500],
+            ["I", 0],
+	    ["R", 2]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person in a slightly larger city.  Right neighbor is infected, so the middle person gets infected."
+    },
+    {
+        "city": [
+	    ["R", 0],
+            ["I", 2],
+            ["S", 1500],
+            ["I", 0],
+	    ["R", 2]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person in a slightly larger city.  Both neighbors are infected, so the person gets infected."
+    },
+    {
+        "city": [
+	    ["I", 0],
+            ["R", 2],
+            ["S", 1500],
+            ["R", 0],
+	    ["I", 2]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["S", 1501],
+        "purpose": "Susceptible middle person in a slightly larger city.  Neighter neighbor is infected, so the person stays susceptible."
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "city": [
+	    ["V", 0],
+            ["I", 0],
+            ["S", 0],
+	    ["V", 0],
+            ["I", 1],
+            ["R", 0],
+	    ["V", 0]
+        ],
+        "expected_num_susceptible": 1,
+        "purpose": "Small city with mixed types plus some vaxxed"
+    },
+
+    {
+        "city": [
+	    ["V", 0],
+	    ["V", 0],
+	    ["V", 0],
+	    ["V", 0],
+	    ["V", 0]	    
+        ],
+        "expected_num_susceptible": 0,
+        "purpose": "Small city with only vaxxed folks"
+    },
+
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+	    ["V", 0],
+	    ["V", 0],
+            ["R", 0],
+	    ["V", 0],
+            ["R", 0]
+        ],
+        "expected_num_susceptible": 2,
+        "purpose": "Small city with mixed types plus but no infected folks"
+    }
+]

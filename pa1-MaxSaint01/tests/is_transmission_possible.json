@@ -1,0 +1,214 @@
+[
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "expected": false,
+        "purpose": "Small city where everyone is susceptible."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["R", 0],
+            ["R", 0],
+            ["R", 0]
+        ],
+        "expected": false,
+        "purpose": "Small city where everyone is recovered"
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 0],
+            ["I", 0],
+            ["I", 0]
+        ],
+        "expected": false,
+        "purpose": "Small city here everyone is infected"
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0],
+            ["R", 0],
+            ["S", 0]
+        ],
+        "expected": false,
+        "purpose": "Larger city with mix of susceptible and recovered people"
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["S", 0],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "expected": true,
+        "purpose": "Small city: susceptible person in location 1 has an infected neighbor"
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["I", 1],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "expected": true,
+        "purpose": "Small city: susceptible people in locations 0 and 2 have infected neighbors"
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["I", 1],
+            ["S", 0]
+        ],
+        "expected": true,
+        "purpose": "Small city: susceptible people in locations 1 and 3 have infected neighbors"
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "expected": true,
+        "purpose": "Small city: susceptible people in locations 0 and 2 have infected neighbors"
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["R", 0],
+            ["R", 0],
+            ["R", 0]
+        ],
+        "expected": false,
+        "purpose": "Small city with one infected in slot 0, rest recovered"
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 2],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 3],
+            ["I", 1]
+        ],
+        "expected": false,
+        "purpose": "Larger city with a mix of infected and recovered people."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["I", 0],
+            ["S", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 2],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["I", 3],
+            ["R", 1]
+        ],
+        "expected": true,
+        "purpose": "Larger city with one susceptible person who has an infected neighbor."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["I", 0],
+            ["S", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 2],
+            ["I", 1],
+            ["I", 0],
+            ["S", 1],
+            ["I", 3],
+            ["R", 1]
+        ],
+        "expected": true,
+        "purpose": "Larger city, more than one susceptible person with an infected neighbor."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["R", 1],
+            ["R", 0],
+            ["S", 1],
+            ["S", 0],
+            ["S", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 2],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 3],
+            ["R", 1]
+        ],
+        "expected": false,
+        "purpose": "Larger city, all susceptible people are protected by recovered people"
+    }
+
+
+]

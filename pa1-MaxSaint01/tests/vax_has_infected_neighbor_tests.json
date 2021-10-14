@@ -1,0 +1,131 @@
+[
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 1,
+        "expected": true,
+        "purpose": "Middle person with an infected left neighbor and a vaxxed right neighbor."
+    },
+    {
+        "city": [
+            ["V", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "expected": true,
+        "purpose": "Middle person with an infected right neighbor and a vaxxed left neighbor."
+    },
+    {
+        "city": [
+            ["V", 0],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 1,
+        "expected": false,
+        "purpose": "Middle person two vaxxed neighbors."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["V", 0],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "location": 2,
+        "expected": true,
+        "purpose": "Middle person with an infected right neighbor and a vaxxed left neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["I", 200],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 2,
+        "expected": true,
+        "purpose": "Middle person with an infected left neighbor and a vaxxed right neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["V", 0],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 2,
+        "expected": false,
+        "purpose": "Middle person with two vaxxed neighbors.  City has more than three people."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["V", 0],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "location": 0,
+        "expected": true,
+        "purpose": "First person with an infected left (wrap-around) neighbor and a vaxxed right neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["I", 0],
+            ["S", 0],
+            ["V", 1]
+        ],
+        "location": 0,
+        "expected": true,
+        "purpose": "First person with an infected right neighbor and a vaxxed left (wrap-around) neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["V", 1],
+            ["V", 0],
+            ["V", 1]
+        ],
+        "location": 0,
+        "expected": false,
+        "purpose": "First person with two vaxxed neighbors.  City has more than three people."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["V", 0],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": true,
+        "purpose": "Last person with an infected right (wrap-around) neighbor and a vaxxed left neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["V", 0],
+            ["S", 0],
+            ["I", 100],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": true,
+        "purpose": "Last person with an infected left neighbor and a vaxxed right (wrap-around) neighbor.  City has more than three people."
+    },
+    {
+        "city": [
+            ["V", 0],
+            ["S", 0],
+            ["V", 100],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": false,
+        "purpose": "Last person both neighbors are vaxxed.  City has more than three people."
+    }
+]

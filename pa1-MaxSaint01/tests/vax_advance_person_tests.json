@@ -1,0 +1,117 @@
+[
+    {
+        "city": [
+            ["V", 1],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["S", 1],
+        "purpose": "Middle person with two vaxxed neighbors.  This person stays susceptible with an increase in the number of days in that state."
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["S", 0],
+            ["V", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person with an infected left neighbor and a vaxxed right neighbor gets infected."
+    },
+    {
+        "city": [
+            ["V", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible middle person with an infected right neighbor and a vaxxed left neighbor gets infected."
+    },
+    {
+        "city": [
+            ["S", 20],
+            ["V", 0],
+            ["V", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["S", 21],
+        "purpose": "First person with two vaxxed neighbors.  This person stays susceptible with an increase in the number of days in that state."	
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["V", 0],
+            ["I", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible first person with an infected left neighbor and a vaxxed right neighbor gets infected."
+    },
+
+    {
+        "city": [
+            ["S", 0],
+            ["I", 2],
+            ["V", 0]
+        ],
+        "location": 0,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible first person with an infected right neighbor and a vaxxed left neighbor gets infected."
+    },
+
+    {
+        "city": [
+            ["V", 0],
+            ["V", 0],
+            ["S", 11]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["S", 12],
+        "purpose": "Last person with two vaxxed neighbors.  This person stays susceptible with an increase in the number of days in that state."	
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["V", 0],
+            ["S", 0]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible last person with an infected right neighbor and a vaxxed left neighbor gets infected."
+    },
+    {
+        "city": [
+            ["V", 1],
+            ["I", 1500],
+            ["S", 0]
+        ],
+        "location": 2,
+        "days_contagious": 3,
+        "expected": ["I", 0],
+        "purpose": "Susceptible last person with an infected left neighbor and a vaxxed right neighbor gets infected."
+    },
+    {
+        "city": [
+	    ["I", 0],
+            ["V", 2],
+            ["S", 1500],
+            ["V", 0],
+	    ["I", 2]
+        ],
+        "location": 2,
+        "days_contagious": 2000,
+        "expected": ["S", 1501],
+        "purpose": "Middle person with two vaxxed neighbors.  This person stays susceptible with an increase in the number of days in that state.  Slightly larger city."
+    }
+
+]

@@ -1,0 +1,228 @@
+[
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "location": 1,
+        "expected": true,
+        "purpose": "Middle person with an infected left neighbor."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "expected": true,
+        "purpose": "Middle person with an infected right neighbor."
+    },
+    {
+        "city": [
+            ["I", 1],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 1,
+        "expected": true,
+        "purpose": "Middle person with two infected neighbors."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["R", 0]
+        ],
+        "location": 1,
+        "expected": false,
+        "purpose": "Middle person with no infected neighbors."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "location": 2,
+        "expected": true,
+        "purpose": "Middle person with a right infected neighbor. City has more than three people."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["I", 200],
+            ["S", 0],
+            ["R", 0]
+        ],
+        "location": 2,
+        "expected": true,
+        "purpose": "Middle person with a left infected neighbor. City has more than three people."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["I", 0],
+            ["S", 0],
+            ["I", 0]
+        ],
+        "location": 2,
+        "expected": true,
+        "purpose": "Middle person with two infected neighbors, City has more than three people."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["S", 0],
+            ["R", 0]
+        ],
+        "location": 2,
+        "expected": false,
+        "purpose": "Middle person with no infected neighbors. City has more than three people."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 0],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "location": 0,
+        "expected": true,
+        "purpose": "First person with a infected left (wrap-around) neighbor."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["I", 1],
+            ["S", 20],
+            ["S", 1]
+        ],
+        "location": 0,
+        "expected": true,
+        "purpose": "First person with an infected right neighbor."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["I", 1],
+            ["S", 0],
+            ["I", 1]
+        ],
+        "location": 0,
+        "expected": true,
+        "purpose": "First person with two infected neighbors."
+    },
+    {
+        "city": [
+            ["S", 0],
+            ["S", 1],
+            ["S", 0],
+            ["S", 1]
+        ],
+        "location": 0,
+        "expected": false,
+        "purpose": "First person with no infected neighbors."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["I", 100],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": true,
+        "purpose": "Last person with an infected left neighbor."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["S", 0],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": true,
+        "purpose": "Last person with an infected right (wrap-around) neighbor."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["S", 0],
+            ["I", 100],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": true,
+        "purpose": "Last person with two infected neighbors."
+    },
+    {
+        "city": [
+            ["R", 0],
+            ["S", 0],
+            ["R", 100],
+            ["S", 0]
+        ],
+        "location": 3,
+        "expected": false,
+        "purpose": "Last person with no infected neighbors."
+    },
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["S", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 2],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["S", 3],
+            ["S", 1]
+        ],
+        "location": 5,
+        "expected": false,
+        "purpose": "Middle person in a larger city with no infected neighbors."
+    },    
+    {
+        "city": [
+            ["I", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["S", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["R", 0],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["I", 2],
+            ["I", 1],
+            ["I", 0],
+            ["I", 1],
+            ["S", 3],
+            ["S", 1]
+        ],
+        "location": 19,
+        "expected": true,
+        "purpose": "Last person in a larger city ith an infected neighbor"
+    }
+]
